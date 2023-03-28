@@ -1,0 +1,19 @@
+    /**
+    * Classe que contém o buffer a ser compartilhado
+    * entre o produto e o consumidor.
+    */
+    public class Compartilhado {
+    private int buffer;
+    private int tamanhoBuffer;
+    public Compartilhado() {
+    }
+    public Compartilhado(int buffer, int tamanhoBuffer) {
+    }
+    //Gets e sets
+    public synchronized void consumir() {
+    setBuffer(getBuffer());
+    }
+    public synchronized void produzir() {
+    setBuffer(getBuffer());
+    }
+}
